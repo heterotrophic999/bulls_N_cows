@@ -25,7 +25,7 @@ void Game::createPlayers() {
         player2 = new HumanPlayer();
 }
 
-bool Game::turn1(Iplayer & player) {
+bool Game::turn1(Iplayer & player, int n) {
     player.bulls = 0;
     player.cows = 0;
 
@@ -42,10 +42,10 @@ bool Game::turn1(Iplayer & player) {
     model.cowCount(player);
 
     if (model.winCheck(player)) {
-        view.printTurn(player);
+        view.printTurn(player, n);
         return true;
     }else {
-        view.printTurn(player);
+        view.printTurn(player, n);
     }
     return false;
 
@@ -65,18 +65,29 @@ bool Game::turn1(Iplayer & player) {
 
 void Game::play() {
     while (true) {
-        bool win1 = turn1(*player1);
-        bool win2 = turn1(*player2);
+        bool win1 = turn1(*player1, 1);
+        bool win2 = turn1(*player2, 2);
 
         if (win1 && win2) {
-            cout << "Draw!";
+            view.printDraw();
             break;
         } else if (win1){
-            cout << "Player1 wins!";
+            view.printWin(1);
             break;
         } else if (win2){
-            cout << "Player2 wins!";
+            view.printWin(2);
             break;
         }
     }
+//    cout << "Player1:" << '\n';
+//    for (int i : player1->num){
+//        cout << i;
+//        cout << '\n';
+//    }
+//    cout << "Player2:" << '\n';
+//    for (int i : player2->num){
+//        cout << i;
+//        cout << '\n';
+//    }
+    view.printNum(*player1, *player2);
 }

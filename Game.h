@@ -23,7 +23,7 @@ public:
 
     Game(int choice);
     void createPlayers();
-    bool turn1(Iplayer & player);
+    bool turn1(Iplayer & player, int n);
     void play();
 };
 

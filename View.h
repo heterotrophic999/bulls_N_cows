@@ -11,8 +11,10 @@
 
 class View {
 public:
-    void printTurn(Iplayer & player);
-    void printWin();
+    void printTurn(Iplayer & player, int n);
+    void printWin(int n);
+    void printDraw();
+    void printNum(Iplayer & player1, Iplayer & player2);
 };
 
 

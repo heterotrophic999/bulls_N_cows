@@ -3,6 +3,7 @@
 //
 
 #include "Controller.h"
+#include <cctype>
 
 using namespace std;
 
