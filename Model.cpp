@@ -30,7 +30,3 @@ bool Model::winCheck(Iplayer &player) {
         return true;
     } else return false;
 }
-
-//Model::Model(Iplayer &player) {
-//    this->player = &player;
-//}

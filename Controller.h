@@ -13,8 +13,6 @@
 class Controller {
 public:
     bool turnCheck(Iplayer & player);
-    //void setPlayer(HumanPlayer & player);
-    //explicit Controller(HumanPlayer & player);
 };
 
 

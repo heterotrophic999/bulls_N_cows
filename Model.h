@@ -11,7 +11,6 @@
 
 class Model {
 public:
-    //Model(Iplayer & player);
     void bullCount(Iplayer & player);
     void cowCount(Iplayer & player);
     bool winCheck(Iplayer  & player);

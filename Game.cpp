@@ -48,19 +48,6 @@ bool Game::turn1(Iplayer & player, int n) {
         view.printTurn(player, n);
     }
     return false;
-
-//    player2.makeMove();
-//    if (!ctrl.turnCheck(player2))
-//        return 0;
-//    model.bullCount(player2);
-//    model.cowCount(player2);
-//    if ((model.winCheck(player2))){
-//        cout << "Player2 win!";
-//        return 0;
-//    }else {
-//        cout << "Player2:";
-//        view.printTurn(player2);
-//    }
 }
 
 void Game::play() {
@@ -79,15 +66,5 @@ void Game::play() {
             break;
         }
     }
-//    cout << "Player1:" << '\n';
-//    for (int i : player1->num){
-//        cout << i;
-//        cout << '\n';
-//    }
-//    cout << "Player2:" << '\n';
-//    for (int i : player2->num){
-//        cout << i;
-//        cout << '\n';
-//    }
     view.printNum(*player1, *player2);
 }

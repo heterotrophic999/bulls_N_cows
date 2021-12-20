@@ -18,11 +18,3 @@ bool Controller::turnCheck(Iplayer & player) {
     }
     return true;
 }
-
-//void Controller::setPlayer(HumanPlayer &player) {
-//    this->player1 = player;
-//}
-
-//Controller::Controller(HumanPlayer & player) {
-//    setPlayer(player);
-//}
